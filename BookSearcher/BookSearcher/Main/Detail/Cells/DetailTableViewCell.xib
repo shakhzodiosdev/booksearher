@@ -18,44 +18,35 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4X3-yo-eHS">
-                        <rect key="frame" x="131.5" y="10" width="120" height="120"/>
+                        <rect key="frame" x="91.5" y="10" width="200" height="200"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="eHu-do-NrG"/>
-                            <constraint firstAttribute="height" constant="120" id="fAT-eX-v00"/>
+                            <constraint firstAttribute="width" constant="200" id="eHu-do-NrG"/>
+                            <constraint firstAttribute="height" constant="200" id="fAT-eX-v00"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igm-M5-5UO">
-                        <rect key="frame" x="20" y="140" width="343" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Te-E8-FXg">
+                        <rect key="frame" x="20" y="220" width="343" height="159"/>
+                        <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Te-E8-FXg">
-                        <rect key="frame" x="20" y="170.5" width="343" height="188"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iw3-vo-bx0">
-                        <rect key="frame" x="20" y="368.5" width="343" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iw3-vo-bx0">
+                        <rect key="frame" x="20" y="389" width="343" height="0.0"/>
+                        <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="igm-M5-5UO" secondAttribute="trailing" constant="20" id="2f8-V6-gec"/>
                     <constraint firstItem="5Te-E8-FXg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2xK-aH-nMU"/>
+                    <constraint firstItem="5Te-E8-FXg" firstAttribute="top" secondItem="4X3-yo-eHS" secondAttribute="bottom" constant="10" id="Cp6-cq-rfq"/>
                     <constraint firstAttribute="trailing" secondItem="Iw3-vo-bx0" secondAttribute="trailing" constant="20" id="D0o-Bt-vAD"/>
-                    <constraint firstItem="igm-M5-5UO" firstAttribute="top" secondItem="4X3-yo-eHS" secondAttribute="bottom" constant="10" id="Da4-z4-KRa"/>
                     <constraint firstItem="4X3-yo-eHS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NrK-Fy-dYS"/>
                     <constraint firstAttribute="trailing" secondItem="5Te-E8-FXg" secondAttribute="trailing" constant="20" id="Ugy-lD-REa"/>
-                    <constraint firstItem="igm-M5-5UO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ZyG-24-37P"/>
                     <constraint firstItem="Iw3-vo-bx0" firstAttribute="top" secondItem="5Te-E8-FXg" secondAttribute="bottom" constant="10" id="fo5-XJ-4Vr"/>
                     <constraint firstAttribute="bottom" secondItem="Iw3-vo-bx0" secondAttribute="bottom" constant="10" id="grY-9i-yOq"/>
                     <constraint firstItem="4X3-yo-eHS" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="iVW-JE-0WH"/>
                     <constraint firstItem="Iw3-vo-bx0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jkp-dl-ubw"/>
-                    <constraint firstItem="5Te-E8-FXg" firstAttribute="top" secondItem="igm-M5-5UO" secondAttribute="bottom" constant="10" id="k2W-Fe-jd5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -63,7 +54,6 @@
                 <outlet property="authorsLabel" destination="Iw3-vo-bx0" id="y99-zN-sGp"/>
                 <outlet property="bookDescriptionLabel" destination="5Te-E8-FXg" id="Czu-NQ-FuQ"/>
                 <outlet property="detailImageView" destination="4X3-yo-eHS" id="xN3-bn-T2d"/>
-                <outlet property="titleLabel" destination="igm-M5-5UO" id="NtL-2u-GTt"/>
             </connections>
             <point key="canvasLocation" x="183.33333333333334" y="222.65625"/>
         </tableViewCell>

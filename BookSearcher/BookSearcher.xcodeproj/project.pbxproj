@@ -25,6 +25,7 @@
 		CE61DB47267B2FAE003B4016 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB46267B2FAE003B4016 /* DetailController.swift */; };
 		CE61DB4D267B31F6003B4016 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB4B267B31F6003B4016 /* DetailTableViewCell.swift */; };
 		CE61DB4E267B31F6003B4016 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61DB4C267B31F6003B4016 /* DetailTableViewCell.xib */; };
+		CE61DB53267B383B003B4016 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB52267B383B003B4016 /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		CE61DB46267B2FAE003B4016 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		CE61DB4B267B31F6003B4016 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		CE61DB4C267B31F6003B4016 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		CE61DB52267B383B003B4016 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				CE61DB38267B2C45003B4016 /* UIImageView+Extension.swift */,
+				CE61DB52267B383B003B4016 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE61DB53267B383B003B4016 /* UITableView+Extension.swift in Sources */,
 				CE1F35D0267A1F9F00989B68 /* NetworkDataFetcher.swift in Sources */,
 				CE1F35AD267A0A8000989B68 /* NetworkService.swift in Sources */,
 				CE61DB39267B2C45003B4016 /* UIImageView+Extension.swift in Sources */,
@@ -502,7 +506,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -557,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -615,7 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36493YK37Y;
 				INFOPLIST_FILE = BookSearcherTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -637,7 +641,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36493YK37Y;
 				INFOPLIST_FILE = BookSearcherTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

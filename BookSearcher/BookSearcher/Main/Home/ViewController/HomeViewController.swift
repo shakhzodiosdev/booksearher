@@ -40,11 +40,16 @@ extension HomeViewController : UITableViewDelegate {
 extension HomeViewController : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if books.count == 0 {
+            tableView.setEmptyMessage("Search for book to get more information")
+        }else{
+            tableView.restore()
+        }
         return books.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell") as! HomeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeTableViewCell.self)) as! HomeTableViewCell
         
         cell.selectionStyle = .none
         
@@ -56,7 +61,7 @@ extension HomeViewController : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let str = UIStoryboard.init(name: "Detail", bundle: nil)
-        let vc = str.instantiateViewController(withIdentifier: "DetailController") as! DetailController
+        let vc = str.instantiateViewController(withIdentifier: String(describing: DetailController.self)) as! DetailController
         vc.item = books[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -72,7 +77,7 @@ extension HomeViewController {
         title = "Book Search"
         
         tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        tableView.register(UINib(nibName: String(describing: HomeTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HomeTableViewCell.self))
         
         searchBar.delegate = self
         

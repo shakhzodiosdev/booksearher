@@ -36,7 +36,7 @@ extension DetailController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell") as! HomeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DetailTableViewCell.self)) as! DetailTableViewCell
         
         cell.selectionStyle = .none
         
@@ -58,8 +58,10 @@ extension DetailController {
     
     func appearanceSettings(){
         title = item.volumeInfo.title
+        
+        tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        tableView.register(UINib(nibName: String(describing: DetailTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: DetailTableViewCell.self))
     }
 }
 

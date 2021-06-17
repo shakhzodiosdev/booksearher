@@ -16,7 +16,7 @@ struct Item: Decodable {
 }
 
 struct Book  : Decodable {
-    let title : String
+    let title : String?
     let authors : [String]?
     let description : String?
     let imageLinks : ImageLinks
@@ -24,6 +24,7 @@ struct Book  : Decodable {
 
 
 struct ImageLinks : Decodable {
-    let thumbnail : String
+    let thumbnail : String?
+    let smallThumbnail : String?
 }
 

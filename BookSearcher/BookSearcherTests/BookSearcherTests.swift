@@ -9,25 +9,48 @@ import XCTest
 @testable import BookSearcher
 
 class BookSearcherTests: XCTestCase {
+    
+    var sut  : HomeViewController!
+    var sut2 : DetailController!
+    
+    let item = Item(volumeInfo: Book(title: nil, authors: nil, description: "read read", imageLinks: ImageLinks(thumbnail: "url", smallThumbnail: "url2")))
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        let storyboard = UIStoryboard.init(name: "Home", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        sut = vc as? HomeViewController
+        sut.loadViewIfNeeded()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testTableViewNotNilWhenViewIsLoaded(){
+        XCTAssertNotNil(sut.tableView)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testTableViewNumberOfRowsIsZeroWhenSearchBarIsEmpty() {
+        sut.searchBar.text = ""
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testTableViewNumberOfRowsIsNotZeroWhenSearchBarIsNotEmpty() {
+        sut.searchBar.text = "pro"
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), sut.books.count)
     }
-
+    
+    func testTableViewSectionZeroNumberOfRowsIsOne(){
+        sut.books.append(item)
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
+    }
+    
+    func testTableViewCellForRowAtIndexPathReturnsHomeTableViewCell(){
+        sut.books.append(item)
+        sut.tableView.reloadData()
+        let  cell = sut.tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(cell is HomeTableViewCell)
+    }
+  
 }
+
+
+

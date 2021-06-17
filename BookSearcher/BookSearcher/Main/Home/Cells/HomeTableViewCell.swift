@@ -22,11 +22,19 @@ class HomeTableViewCell: UITableViewCell {
     }
 
     func configureCell ( data : Item){
-        self.titleLabel.text = data.volumeInfo.title
-        if let authors = data.volumeInfo.authors {
-            self.authorLabel.text = "Authors: " + authors.joined(separator: ", ")
+        
+        if let title = data.volumeInfo.title{
+        self.titleLabel.text = title
         }
-        self.bookImageView.imageFromServerURL(data.volumeInfo.imageLinks.thumbnail, placeHolder: UIImage(named: ""))
+        
+        if let authors = data.volumeInfo.authors {
+        self.authorLabel.text = authors.count > 1 ? "Authors: " + authors.joined(separator: ", ") :  "Author: " + authors.joined(separator: ", ")
+        }else{
+        self.authorLabel.text = "Author: -"
+        }
+        
+        guard let urlString = data.volumeInfo.imageLinks.smallThumbnail else { return }
+        self.bookImageView.imageFromServerURL(urlString, placeHolder: UIImage(named: ""))
     }
     
 }
