@@ -70,9 +70,11 @@ extension HomeViewController {
     
     func appearanceSettings(){
         title = "Book Search"
+        
         tableView.separatorStyle = .none
-        searchBar.delegate = self
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        
+        searchBar.delegate = self
         
         //by default hide Cancel Button
         self.searchBar.showsCancelButton = false

@@ -23,6 +23,8 @@
 		CE61DB39267B2C45003B4016 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB38267B2C45003B4016 /* UIImageView+Extension.swift */; };
 		CE61DB42267B2F59003B4016 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE61DB41267B2F59003B4016 /* Detail.storyboard */; };
 		CE61DB47267B2FAE003B4016 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB46267B2FAE003B4016 /* DetailController.swift */; };
+		CE61DB4D267B31F6003B4016 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB4B267B31F6003B4016 /* DetailTableViewCell.swift */; };
+		CE61DB4E267B31F6003B4016 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61DB4C267B31F6003B4016 /* DetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		CE61DB38267B2C45003B4016 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		CE61DB41267B2F59003B4016 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		CE61DB46267B2FAE003B4016 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		CE61DB4B267B31F6003B4016 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		CE61DB4C267B31F6003B4016 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 		CE1F35AA267A0A0700989B68 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE61DB4B267B31F6003B4016 /* DetailTableViewCell.swift */,
+				CE61DB4C267B31F6003B4016 /* DetailTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				CE1F3577267A086400989B68 /* Assets.xcassets in Resources */,
 				CE1F35C2267A133100989B68 /* HomeTableViewCell.xib in Resources */,
 				CE61DB42267B2F59003B4016 /* Detail.storyboard in Resources */,
+				CE61DB4E267B31F6003B4016 /* DetailTableViewCell.xib in Resources */,
 				CE1F35B8267A109B00989B68 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +403,7 @@
 				CE1F356E267A085F00989B68 /* AppDelegate.swift in Sources */,
 				CE1F35B2267A0FFF00989B68 /* HomeViewController.swift in Sources */,
 				CE61DB47267B2FAE003B4016 /* DetailController.swift in Sources */,
+				CE61DB4D267B31F6003B4016 /* DetailTableViewCell.swift in Sources */,
 				CE1F3570267A085F00989B68 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
