@@ -12,6 +12,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var searchBar : UISearchBar!
 
+    let dataFetcher = NetworkDataFetcher()
+    
+    let urlString = "https://www.googleapis.com/books/v1/volumes?q="
+    
+    var books = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +40,7 @@ extension HomeViewController : UITableViewDelegate {
 extension HomeViewController : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return books.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,10 +48,18 @@ extension HomeViewController : UITableViewDataSource{
         
         cell.selectionStyle = .none
         
+        let data = books[indexPath.row]
+        cell.configureCell(data: data)
         return cell
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let str = UIStoryboard.init(name: "Detail", bundle: nil)
+        let vc = str.instantiateViewController(withIdentifier: "DetailController") as! DetailController
+        vc.item = books[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 
@@ -60,14 +73,26 @@ extension HomeViewController {
         tableView.separatorStyle = .none
         searchBar.delegate = self
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        
+        //by default hide Cancel Button
+        self.searchBar.showsCancelButton = false
     }
 }
 
 
 //MARK: - UISearchBarDelegate
 extension HomeViewController : UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.searchBar.showsCancelButton = true
+        let urlString = self.urlString + searchText
+        let _ = dataFetcher.fetchBooks(urlString: urlString, completion: { books in
+            self.books = books ?? []
+            self.tableView.reloadData()
+        })
+    }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.searchBar.resignFirstResponder()
+        self.searchBar.showsCancelButton = false
     }
 }

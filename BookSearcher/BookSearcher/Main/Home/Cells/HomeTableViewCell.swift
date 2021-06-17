@@ -11,7 +11,6 @@ class HomeTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var thumbnailLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var bookImageView: UIImageView!
     
@@ -22,6 +21,12 @@ class HomeTableViewCell: UITableViewCell {
 
     }
 
-   
+    func configureCell ( data : Item){
+        self.titleLabel.text = data.volumeInfo.title
+        if let authors = data.volumeInfo.authors {
+            self.authorLabel.text = "Authors: " + authors.joined(separator: ", ")
+        }
+        self.bookImageView.imageFromServerURL(data.volumeInfo.imageLinks.thumbnail, placeHolder: UIImage(named: ""))
+    }
     
 }

@@ -22,27 +22,21 @@
                         <rect key="frame" x="5" y="5" width="347" height="96"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-NZ-rSq">
-                                <rect key="frame" x="10" y="33" width="30" height="30"/>
+                                <rect key="frame" x="10" y="18" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="5Y5-yd-HS7"/>
-                                    <constraint firstAttribute="height" constant="30" id="fxB-dE-lWD"/>
+                                    <constraint firstAttribute="width" constant="60" id="5Y5-yd-HS7"/>
+                                    <constraint firstAttribute="height" constant="60" id="fxB-dE-lWD"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X25-bw-iCV">
-                                <rect key="frame" x="50" y="10" width="287" height="17"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Windows IT PRO/RE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X25-bw-iCV">
+                                <rect key="frame" x="80" y="10" width="257" height="22"/>
+                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDx-bZ-Qvb">
-                                <rect key="frame" x="50" y="35" width="287" height="18"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF2-rs-8ZU">
-                                <rect key="frame" x="50" y="61" width="287" height="25"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Remark " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF2-rs-8ZU">
+                                <rect key="frame" x="80" y="40" width="257" height="46"/>
+                                <fontDescription key="fontDescription" name="NotoSansKannada-Light" family="Noto Sans Kannada" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -51,14 +45,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kF2-rs-8ZU" secondAttribute="trailing" constant="10" id="3Pw-wM-JgH"/>
                             <constraint firstAttribute="bottom" secondItem="kF2-rs-8ZU" secondAttribute="bottom" constant="10" id="AuS-3i-HbV"/>
+                            <constraint firstItem="kF2-rs-8ZU" firstAttribute="top" secondItem="X25-bw-iCV" secondAttribute="bottom" constant="8" id="HqD-W6-zoI"/>
                             <constraint firstItem="Tsx-NZ-rSq" firstAttribute="leading" secondItem="viz-ig-FOX" secondAttribute="leading" constant="10" id="KXr-Rz-36C"/>
-                            <constraint firstAttribute="trailing" secondItem="cDx-bZ-Qvb" secondAttribute="trailing" constant="10" id="Kk1-Jb-3nB"/>
-                            <constraint firstItem="cDx-bZ-Qvb" firstAttribute="top" secondItem="X25-bw-iCV" secondAttribute="bottom" constant="8" id="M5d-jg-1xO"/>
                             <constraint firstItem="kF2-rs-8ZU" firstAttribute="leading" secondItem="Tsx-NZ-rSq" secondAttribute="trailing" constant="10" id="aqT-fK-91O"/>
-                            <constraint firstItem="cDx-bZ-Qvb" firstAttribute="leading" secondItem="Tsx-NZ-rSq" secondAttribute="trailing" constant="10" id="bhA-o2-xeG"/>
                             <constraint firstItem="Tsx-NZ-rSq" firstAttribute="centerY" secondItem="viz-ig-FOX" secondAttribute="centerY" id="eDy-XL-qty"/>
                             <constraint firstItem="X25-bw-iCV" firstAttribute="leading" secondItem="Tsx-NZ-rSq" secondAttribute="trailing" constant="10" id="hIm-fH-aUv"/>
-                            <constraint firstItem="kF2-rs-8ZU" firstAttribute="top" secondItem="cDx-bZ-Qvb" secondAttribute="bottom" constant="8" id="iwA-Vd-Xcd"/>
                             <constraint firstItem="X25-bw-iCV" firstAttribute="top" secondItem="viz-ig-FOX" secondAttribute="top" constant="10" id="kKA-5X-F9a"/>
                             <constraint firstAttribute="trailing" secondItem="X25-bw-iCV" secondAttribute="trailing" constant="10" id="s50-Mv-N8X"/>
                         </constraints>
@@ -75,7 +66,6 @@
             <connections>
                 <outlet property="authorLabel" destination="kF2-rs-8ZU" id="Eqd-5u-3Vc"/>
                 <outlet property="bookImageView" destination="Tsx-NZ-rSq" id="GSP-1T-jFe"/>
-                <outlet property="thumbnailLabel" destination="cDx-bZ-Qvb" id="SFX-Ph-N6P"/>
                 <outlet property="titleLabel" destination="X25-bw-iCV" id="PSJ-ua-QS1"/>
             </connections>
             <point key="canvasLocation" x="163.04347826086959" y="127.90178571428571"/>
