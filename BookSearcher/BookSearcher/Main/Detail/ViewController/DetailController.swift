@@ -40,7 +40,9 @@ extension DetailController : UITableViewDataSource{
         
         cell.selectionStyle = .none
         
+        if let item = self.item {
         cell.configureCell(data: item)
+        }
         return cell
         
     }

@@ -13,12 +13,12 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var bookImageView: UIImageView!
+    @IBOutlet weak var shadowView: UIView!
     
   
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
 
     func configureCell ( data : Item){

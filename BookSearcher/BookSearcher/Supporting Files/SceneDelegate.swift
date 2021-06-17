@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let str = UIStoryboard.init(name: "Home", bundle: nil)
         let vc = str.instantiateViewController(withIdentifier: "HomeViewController")
         window?.rootViewController = UINavigationController(rootViewController: vc)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         window?.makeKeyAndVisible()
     }
 

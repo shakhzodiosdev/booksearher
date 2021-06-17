@@ -14,8 +14,6 @@ class HomeViewController: UIViewController {
 
     let dataFetcher = NetworkDataFetcher()
     
-    let urlString = "https://www.googleapis.com/books/v1/volumes?q="
-    
     var books = [Item]()
     
     override func viewDidLoad() {
@@ -74,14 +72,16 @@ extension HomeViewController : UITableViewDataSource{
 extension HomeViewController {
     
     func appearanceSettings(){
+        
         title = "Book Search"
         
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: String(describing: HomeTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HomeTableViewCell.self))
+        tableView.keyboardDismissMode = .onDrag
         
         searchBar.delegate = self
         
-        //by default hide Cancel Button
+        //by default CancelButton is hidden
         self.searchBar.showsCancelButton = false
     }
 }
@@ -90,8 +90,10 @@ extension HomeViewController {
 //MARK: - UISearchBarDelegate
 extension HomeViewController : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.searchBar.showsCancelButton = true
-        let urlString = self.urlString + searchText
+      
+        self.searchBar.showsCancelButton = searchText.isEmpty ? false : true
+
+            let urlString = Constants.BASE_URL + searchText
         let _ = dataFetcher.fetchBooks(urlString: urlString, completion: { books in
             self.books = books ?? []
             self.tableView.reloadData()
@@ -99,6 +101,7 @@ extension HomeViewController : UISearchBarDelegate{
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+       
         self.searchBar.resignFirstResponder()
         self.searchBar.showsCancelButton = false
     }

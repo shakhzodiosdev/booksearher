@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiE-vY-buq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="5" y="44" width="404" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="v4B-lG-qGD"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <color key="tintColor" systemColor="linkColor"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -40,8 +40,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kFe-QL-wyj" firstAttribute="leading" secondItem="CIN-wx-44B" secondAttribute="leading" id="7bM-6y-Vez"/>
-                            <constraint firstAttribute="trailing" secondItem="yiE-vY-buq" secondAttribute="trailing" id="Qtw-lM-Oy4"/>
-                            <constraint firstItem="yiE-vY-buq" firstAttribute="leading" secondItem="CIN-wx-44B" secondAttribute="leading" id="REM-we-iqU"/>
+                            <constraint firstAttribute="trailing" secondItem="yiE-vY-buq" secondAttribute="trailing" constant="5" id="Qtw-lM-Oy4"/>
+                            <constraint firstItem="yiE-vY-buq" firstAttribute="leading" secondItem="CIN-wx-44B" secondAttribute="leading" constant="5" id="REM-we-iqU"/>
                             <constraint firstItem="CIN-wx-44B" firstAttribute="bottom" secondItem="kFe-QL-wyj" secondAttribute="bottom" id="ddU-la-9hK"/>
                             <constraint firstItem="CIN-wx-44B" firstAttribute="trailing" secondItem="kFe-QL-wyj" secondAttribute="trailing" id="kiC-Yx-5gR"/>
                             <constraint firstItem="yiE-vY-buq" firstAttribute="top" secondItem="CIN-wx-44B" secondAttribute="top" id="l0G-T4-ZUb"/>
@@ -59,11 +59,11 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

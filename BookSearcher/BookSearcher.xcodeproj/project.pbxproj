@@ -19,13 +19,14 @@
 		CE1F35C1267A133100989B68 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F35BF267A133100989B68 /* HomeTableViewCell.swift */; };
 		CE1F35C2267A133100989B68 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1F35C0267A133100989B68 /* HomeTableViewCell.xib */; };
 		CE1F35D0267A1F9F00989B68 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F35CF267A1F9F00989B68 /* NetworkDataFetcher.swift */; };
-		CE1F35D9267A207000989B68 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F35D8267A207000989B68 /* Book.swift */; };
+		CE1F35D9267A207000989B68 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F35D8267A207000989B68 /* Books.swift */; };
 		CE61DB39267B2C45003B4016 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB38267B2C45003B4016 /* UIImageView+Extension.swift */; };
 		CE61DB42267B2F59003B4016 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE61DB41267B2F59003B4016 /* Detail.storyboard */; };
 		CE61DB47267B2FAE003B4016 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB46267B2FAE003B4016 /* DetailController.swift */; };
 		CE61DB4D267B31F6003B4016 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB4B267B31F6003B4016 /* DetailTableViewCell.swift */; };
 		CE61DB4E267B31F6003B4016 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61DB4C267B31F6003B4016 /* DetailTableViewCell.xib */; };
 		CE61DB53267B383B003B4016 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB52267B383B003B4016 /* UITableView+Extension.swift */; };
+		CE61DB61267B6300003B4016 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DB60267B6300003B4016 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,13 +65,14 @@
 		CE1F35BF267A133100989B68 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		CE1F35C0267A133100989B68 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		CE1F35CF267A1F9F00989B68 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
-		CE1F35D8267A207000989B68 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		CE1F35D8267A207000989B68 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		CE61DB38267B2C45003B4016 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		CE61DB41267B2F59003B4016 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		CE61DB46267B2FAE003B4016 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		CE61DB4B267B31F6003B4016 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		CE61DB4C267B31F6003B4016 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 		CE61DB52267B383B003B4016 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		CE61DB60267B6300003B4016 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				CE1F35D7267A205F00989B68 /* Model */,
 				CE1F35AC267A0A8000989B68 /* NetworkService.swift */,
 				CE1F35CF267A1F9F00989B68 /* NetworkDataFetcher.swift */,
+				CE61DB60267B6300003B4016 /* Constants.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -243,7 +246,7 @@
 		CE1F35D7267A205F00989B68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CE1F35D8267A207000989B68 /* Book.swift */,
+				CE1F35D8267A207000989B68 /* Books.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -402,13 +405,14 @@
 				CE1F35D0267A1F9F00989B68 /* NetworkDataFetcher.swift in Sources */,
 				CE1F35AD267A0A8000989B68 /* NetworkService.swift in Sources */,
 				CE61DB39267B2C45003B4016 /* UIImageView+Extension.swift in Sources */,
-				CE1F35D9267A207000989B68 /* Book.swift in Sources */,
+				CE1F35D9267A207000989B68 /* Books.swift in Sources */,
 				CE1F35C1267A133100989B68 /* HomeTableViewCell.swift in Sources */,
 				CE1F356E267A085F00989B68 /* AppDelegate.swift in Sources */,
 				CE1F35B2267A0FFF00989B68 /* HomeViewController.swift in Sources */,
 				CE61DB47267B2FAE003B4016 /* DetailController.swift in Sources */,
 				CE61DB4D267B31F6003B4016 /* DetailTableViewCell.swift in Sources */,
 				CE1F3570267A085F00989B68 /* SceneDelegate.swift in Sources */,
+				CE61DB61267B6300003B4016 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
